@@ -21,6 +21,6 @@ app.use(require('./middleware/validate-session'))
 app.use('/race', auth);
 app.use('/race', race);
 
-app.listen(3000, function(){
-    console.log('app is listening on 3000');
+app.listen(process.env.PORT, function(){
+    console.log(`app is listening on ${process.env.PORT}`);
 })

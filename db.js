@@ -2,7 +2,7 @@
 var Sequelize = require('sequelize');
 
                         
-var sequelize = new Sequelize('races', 'postgres', 'viranque1', {
+var sequelize = new Sequelize(process.env.DBNAME, process.env.PGUSER, process.env.PGPASS, {
     host: 'localhost', 
     dialect: 'postgres'  
 });
