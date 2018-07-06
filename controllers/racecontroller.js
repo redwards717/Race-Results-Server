@@ -330,6 +330,8 @@ router.put('/update', function (req, res) {
         { where: { id: data } }
     ).then(
         function updateSuccess() {
+
+            
             res.json({
                 race_name: req.body.race.race_name,
                 race_type: req.body.race.race_type,
